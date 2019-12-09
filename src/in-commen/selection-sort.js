@@ -16,6 +16,7 @@ for (let i = 0,len = arr.length; i <len; i++) {
             arr[j] = temp;
         } 
     }
+    console.log(arr);
     
 }
 console.log(arr);
