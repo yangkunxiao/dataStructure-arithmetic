@@ -1,5 +1,6 @@
 /**
  * 栈：Last In First Out => LIFO 后进先出
+ * 只能向栈顶添加元素 只能从栈顶删除元素
  * 
 */
 class stack {
@@ -40,5 +41,5 @@ arr.push(2);
 // arr.shift()
 
 
-console.log(arr.peek());
+console.log(arr.pop());
 // console.log(arr.isEmpty());

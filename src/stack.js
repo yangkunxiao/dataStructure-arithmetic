@@ -1,3 +1,4 @@
+//@ts-check
 const _items = new WeakMap();
 class Stack {
     constructor(){

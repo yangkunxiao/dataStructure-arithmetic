@@ -1,12 +1,12 @@
 //@ts-check
 /**
- * queue：First In First Out : 队列先进先出 
+ * queue：队列 First In First Out : 队列先进先出 
 */
 class Queue {
     constructor() {
         this.items = {};//队列
-        this.count = 0;//队列的键
-        this.lowestCount = 0;//用于追踪第一个元素
+        this.count = 0;//队列的键、 跟踪尾部、计算插入数量
+        this.lowestCount = 0;// 跟踪头部、计算删除数量
     };
     enqueue(elements) {
         this.items[this.count] = elements;

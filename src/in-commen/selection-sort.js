@@ -8,16 +8,16 @@ var temp;
  * 空间复杂度：O(1)
  * 
 */
-for (let i = 0,len = arr.length; i <len; i++) {
+for (let i = 0, len = arr.length; i < len; i++) {
     for (let j = i + 1; j < len - i; j++) {
-        if(arr[i] > arr[j]){
+        if (arr[i] > arr[j]) {
             temp = arr[i];
             arr[i] = arr[j];
             arr[j] = temp;
-        } 
+        }
     }
     console.log(arr);
-    
+
 }
 console.log(arr);
 
