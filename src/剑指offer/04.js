@@ -8,36 +8,30 @@
 * @param {number} target
 * @return {boolean}
 */
-var findNumberIn2DArray = function (matrix, target) {
-    if (matrix.length === 0) return false;
-    // for (let i = 0; i < matrix.length; i++) {
-    //     let lineArr = matrix[i];
-    //     for (let j = 0; j < lineArr.length; j++) {
-    //         if (target === lineArr[j]) {
-    //             return true
-    //         }
-    //     }
-    // }
-    let x = 0, y = matrix.length - 1;
-    while (x < matrix[0].length && y >= 0) {
+function findNumberIn2DArray(matrix,target){
+    if(!Array.isArray(matrix)) return false;
+    //默认从第一列最后一个位置开始比较 如果target > matrix[y][x] 向右走： x++ ，否则向左 ： y--
+    let x = 0,//记录x坐标
+        y = matrix.length - 1;//记录y坐标
+    while(x < matrix[0].length && y >= 0){
         if(target > matrix[y][x]){
             x++;
         }else if(target < matrix[y][x]){
             y--;
-        }else{
-            return true;
+        }else {
+            return true
         }
-    };
+    }
     return false
-};
+}
 
 var matrix = [
-    [1,1]
-    // [1, 4, 7, 11, 15],
-    // [2, 5, 8, 12, 19],
-    // [3, 6, 9, 16, 22],
-    // [10, 13, 14, 17, 24],
-    // [18, 21, 23, 26, 30]
+    // [1,1]
+    [1, 4, 7, 11, 15],
+    [2, 5, 8, 12, 19],
+    [3, 6, 9, 16, 22],
+    [10, 13, 14, 17, 24],
+    [18, 21, 23, 26, 30]
 ];
 var target = 15;
 
